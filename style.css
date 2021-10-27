@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container, .playground{
+    width: 100%;
+    height: 100vh;
+}
+
+.playground{
+    background-color: rgb(238, 188, 62);
+    position: relative;
+}
+
+.start-btn{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: .3s ease all;
+}
+
+.start-btn button{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+.start-btn.fade{
+    opacity: 0;
+    visibility: hidden;
+}
+
+.finish-line{
+    background-color: white;
+    width: 100%;
+    height: 5px;
+    top: 50px;
+    position: absolute;
+    
+}
+
+.start-line{
+    width: 100%;
+    background-color: white;
+    height: 5px;
+    position: absolute;
+    bottom: 100px;
+}
+
+.player456{
+    height: 20px;
+    width: 20px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 600px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+}
+
+.player456::before{
+    content: '456';
+    font-size: 15px;
+    text-align: center;
+    margin-top: -13px;
+    font-weight: 600;
+}
+
+.player{
+    height: 20px;
+    width: 20px;
+    background-color: rgb(14, 225, 77);
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    transition: 1s ease all;
+}
+
+.player::before{
+    font-size: 15px;
+    text-align: center;
+    margin-top: -13px;
+    font-weight: 600;
+}
+
+.eliminated-player-count{
+    position: absolute;
+    top: 60px;
+    font-size: 1.2rem;
+    z-index: 10;
+}
+
+.game-over{
+    position: absolute;
+    top: -50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: .8s ease-in all;
+}
+
+.game-over.show{
+    top: 50%;
+}
